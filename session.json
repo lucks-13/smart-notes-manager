@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "new title",
+        "content": "content1",
+        "tags": [
+            "tag"
+        ],
+        "created": "2026-10-28T18:47:47.073004",
+        "updated": "2026-10-28T18:47:47.073361"
+    },
+    {
+        "id": 2,
+        "title": "title2",
+        "content": "content2",
+        "tags": [],
+        "created": "2026-10-28T18:47:47.073022",
+        "updated": "2026-10-28T18:47:47.073022"
+    }
+]

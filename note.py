@@ -58,7 +58,7 @@ print(note1.created)
 print(note1.updated)
 
 
-note1.tags.add("tag")
+note1.add_tag("tag")
 
 print(note1.id)
 print(note1)
@@ -71,5 +71,8 @@ notes = [note1,note2]
 
 notes_data = []
 
-for i in notes:
-    
+for note in notes:
+    notes_data.append(note.to_dict())
+
+with open("session.json","w") as file:
+    json.dump(notes_data, file, indent=4)
