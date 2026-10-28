@@ -28,12 +28,13 @@ while True:
     elif x==2:
         print("====== Your Notes ======\n")
         if not notes:
-            print("List is Empty.")
+            print("No notes found.")
         else:
             for note in notes:
                 print(f"ID : {note.id}")
+                print(f"Title : {note.title}")
                 print(f"Content : {note.content}")
-                print(f"Tags : {", ".join(note.tags) if not note}")
+                print(f"Tags : {', '.join(note.tags) if note.tags else 'None'}")
                 print(f"Created : {note.created}")
                 print(f"Updated : {note.updated}")
                 print("------------------------------------")
