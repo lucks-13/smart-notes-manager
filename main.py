@@ -43,3 +43,17 @@ class Note:
             "created" : self.created.isoformat(),
             "updated" : self.updated.isoformat()
         }
+
+    @classmethod
+    def from_dict(cls, data):
+        note = cls(data["title"], data["content"])
+
+        note.id = data["id"]
+        note.tags = set(data["tags"])
+        note.created = datetime.fromisoformat(data["created"])
+        note.updated = datetime.fromisoformat(data["updated"])
+        cls.counter = max(cls.counter, note.id + 1)
+
+        return note
+
+note1 = 
