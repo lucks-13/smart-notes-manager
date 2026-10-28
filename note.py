@@ -20,7 +20,17 @@ class Note:
         self.updated = datetime.now()
 
     def add_tag(self,tag):
-        self.tags.append(tag)
+        self.tags.add(tag)
+        self.updated = datetime.now()
+
+    def remove_tag(self,tag):
+        try:
+            self.tags.remove(tag)
+            self.updated = datetime.now()
+        except KeyError:
+            print(tag," Tag is not created yet so cannot be removed")
+
+    
     
 note1 = Note("title1","content1")
 note2 = Note("title2","content2")
@@ -37,7 +47,7 @@ print(note1.created)
 print(note1.updated)
 
 
-note1.tags.append("tag")
+note1.tags.add("tag")
 
 print(note1.id)
 print(note1)
