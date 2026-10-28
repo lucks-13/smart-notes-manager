@@ -11,25 +11,25 @@ while True:
     print("6. Exit.")
 
     x = int(input("Choose an option :"))
-    if not x or 1<=x<=6:
+    if not x:
         continue
-    break
+    elif 1<=x<=6:
+        if x==1:
+            pass
+        elif x==2:
+            pass
+        elif x==3:
+            pass
+        elif x==4:
+            pass
+        elif x==5:
+            pass
+        elif x==6:
+            print("Good Bye.")
+            SystemExit(1)
+    else:
+        break
 
-if x==1:
-    pass
-elif x==2:
-    pass
-elif x==3:
-    pass
-elif x==4:
-    pass
-elif x==5:
-    pass
-elif x==6:
-    pass
-
-note1 = Note("title1","content1")
-note2 = Note("title2","content2")
 
 note1.update_title("new_title1")
 note1.add_tag("1tag1")
