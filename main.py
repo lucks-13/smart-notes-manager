@@ -1,6 +1,14 @@
 from note import Note
 from storage import save_notes, load_notes
 
+while True:
+    print("====== Smart Notes Manager ======\n")
+    print("1. Create a note")
+    print("2. View all notes")
+    print("3. Update a note")
+    print("4. Update a note")
+    int(input("Choose an option :"))
+
 note1 = Note("title1","content1")
 note2 = Note("title2","content2")
 
