@@ -6,8 +6,27 @@ while True:
     print("1. Create a note")
     print("2. View all notes")
     print("3. Update a note")
-    print("4. Update a note")
-    int(input("Choose an option :"))
+    print("4. Delete a note")
+    print("5. Search notes")
+    print("6. Exit.")
+
+    x = int(input("Choose an option :"))
+    if not x or 1<=x<=6:
+        continue
+    break
+
+if x==1:
+    pass
+elif x==2:
+    pass
+elif x==3:
+    pass
+elif x==4:
+    pass
+elif x==5:
+    pass
+elif x==6:
+    pass
 
 note1 = Note("title1","content1")
 note2 = Note("title2","content2")
