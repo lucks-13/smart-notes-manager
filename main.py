@@ -27,13 +27,16 @@ while True:
         print(f"Note \"{title}\" created successfully! ID : {note.id}")
     elif x==2:
         print("====== Your Notes ======\n")
-        for note in notes:
-            print("ID : {note.id}")
-            print("Content : {note.content}")
-            print("Tags : {note.tags}")
-            print("Created : {note.created}")
-            print("Updated : {note.updated}")
-            print("------------------------")
+        if not notes:
+            print("List is Empty.")
+        else:
+            for note in notes:
+                print(f"ID : {note.id}")
+                print(f"Content : {note.content}")
+                print(f"Tags : {", ".join(note.tags) if not note}")
+                print(f"Created : {note.created}")
+                print(f"Updated : {note.updated}")
+                print("------------------------------------")
     elif x==3:
         print("option 3")
     elif x==4:
