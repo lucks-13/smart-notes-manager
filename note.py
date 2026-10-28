@@ -30,6 +30,17 @@ class Note:
         except KeyError:
             print(tag," Tag is not created yet so cannot be removed")
 
+    def dict_to_json(self):
+        dict = {
+            "id" : self.id,
+            "title" : self.title,
+            "content" : self.content,
+            "tags" : self.tags,
+            "created" : self.created,
+            "updated" : self.updated
+        }
+        
+
     
     
 note1 = Note("title1","content1")
