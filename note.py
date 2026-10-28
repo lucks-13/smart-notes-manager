@@ -9,6 +9,7 @@ class Note:
         self.content = content
         self.tags = []
         self.created = datetime.now()
+        self.updated = self.created
     
 note1 = Note("title1","content1")
 note2 = Note("title2","content2")
