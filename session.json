@@ -1,20 +1,21 @@
 [
     {
         "id": 1,
-        "title": "new title",
+        "title": "new_title1",
         "content": "content1",
         "tags": [
-            "tag"
+            "1tag1",
+            "2tag1"
         ],
-        "created": "2026-10-28T18:47:47.073004",
-        "updated": "2026-10-28T18:47:47.073361"
+        "created": "2026-10-28T19:20:18.842259",
+        "updated": "2026-10-28T19:20:18.842282"
     },
     {
         "id": 2,
         "title": "title2",
         "content": "content2",
         "tags": [],
-        "created": "2026-10-28T18:47:47.073022",
-        "updated": "2026-10-28T18:47:47.073022"
+        "created": "2026-10-28T19:20:18.842278",
+        "updated": "2026-10-28T19:20:18.842278"
     }
 ]
