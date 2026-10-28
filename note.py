@@ -7,14 +7,20 @@ class Note:
         Note.counter+=1
         self.title = title
         self.content = content
-        self.tags = []
+        self.tags = set()
         self.created = datetime.now()
         self.updated = self.created
 
     def update_title(self,new_title):
         self.title = new_title
         self.updated = datetime.now()
+    
+    def update_content(self,new_content):
+        self.content = new_content
+        self.updated = datetime.now()
 
+    def add_tag(self,tag):
+        self.tags.append(tag)
     
 note1 = Note("title1","content1")
 note2 = Note("title2","content2")
