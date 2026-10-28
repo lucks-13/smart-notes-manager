@@ -39,7 +39,12 @@ while True:
                 print(f"Updated : {note.updated}")
                 print("------------------------------------")
     elif x==3:
-        print("option 3")
+        id = int(input("Enter ID of the note to update :\n"))
+        print("1. Update title")
+        print("2. Update content")
+        print("3. Add tag")
+        print("4. Remove tag\n")
+        int(input("Choose what to update :"))
     elif x==4:
         print("option 4")
     elif x==5:
