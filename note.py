@@ -43,6 +43,10 @@ class Note:
 
         return note_dict
 
+    @classmethod
+    def from_dict(cls, data):
+        pass
+
 note1 = Note("title1","content1")
 note2 = Note("title2","content2")
 
