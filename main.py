@@ -51,8 +51,11 @@ while True:
             print("4. Remove tag\n")
             y = int(input("Choose what to update :"))
             if y == 1:
-                new_title = input()
-                print("Option 1")
+                new_title = input("Enter new title :")
+                Note.update_title(new_title)
+                print("Note updated successfully.")
+            elif y == 2:
+                new_content = 
 
     elif x==4:
         print("option 4")
