@@ -1,5 +1,7 @@
 class Note:
+    counter = 1
     def __init__(self,title,content):
+        self.id = 
         self.title = title
         self.content = content
     
