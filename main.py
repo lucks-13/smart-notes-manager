@@ -1,7 +1,7 @@
 from note import Note
 from storage import save_notes, load_notes
 
-notes = load_notes
+notes = load_notes()
 
 while True:
     print("====== Smart Notes Manager ======\n")
@@ -19,7 +19,11 @@ while True:
         continue
 
     if x==1:
-        print("option 1")
+        title = input("Enter note title :")
+        content = input("Enter note content :")
+        note = Note(title, content)
+        notes.append(note)
+        save_notes(notes)
     elif x==2:
         print("option 2")
     elif x==3:
