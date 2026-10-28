@@ -47,29 +47,32 @@ while True:
                 continue
             for note in notes:
                 if note.id == note_id:
+                    print("1. Update title")
+                    print("2. Update content")
+                    print("3. Add tag")
+                    print("4. Remove tag\n")
+
+                    y = int(input("Choose what to update :"))
+                    if y == 1:
+                        new_title = input("Enter new title :")
+                        note.update_title(new_title)
+                        print("Note updated successfully.")
+                    elif y == 2:
+                        new_content = input("Enter new content :")
+                        note.update_content(new_title)
+                        print("Note updated successfully.")
+                    elif y == 3:
+                    
+                    elif y == 4:
+                    
+                    else:
+                        print("Invalid option.")
+
+
 
             else:
-                
-
-            print("1. Update title")
-            print("2. Update content")
-            print("3. Add tag")
-            print("4. Remove tag\n")
-            y = int(input("Choose what to update :"))
-            if y == 1:
-                new_title = input("Enter new title :")
-                Note.update_title(new_title)
-                print("Note updated successfully.")
-            elif y == 2:
-                new_content = input("Enter new content :")
-                Note.update_content(new_title)
-                print("Note updated successfully.")
-            elif y == 3:
-
-            elif y == 4:
-
-            else:
-                print("Invalid option.")                             
+                print("Please enter te valid ID.")
+                continue
 
     elif x==4:
         print("option 4")
