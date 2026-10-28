@@ -28,4 +28,18 @@ class Note:
         self.updated = datetime.now()
 
     def remove_tag(self, tag):
-        self
+        if tag in self.tags:
+            self.tags.remove(tag)
+            self.updated = datetime.now()
+        else:
+            print(f"Tag \"{tag}\" does not exist.")
+
+    def to_dict(self):
+        return {
+            "id" : self.id,
+            "title" : self.title,
+            "content" : self.content,
+            "tags" : list(self.tags),
+            "created" : self.created.isoformat(),
+            "updated" : self.updated.isoformat()
+        }
