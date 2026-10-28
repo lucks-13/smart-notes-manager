@@ -19,4 +19,17 @@ while True:
         continue
 
     if x==1:
-        print("")
+        print("option 1")
+    elif x==2:
+        print("option 2")
+    elif x==3:
+        print("option 3")
+    elif x==4:
+        print("option 4")
+    elif x==5:
+        print("option 5")
+    elif x==6:
+        print("Good Bye.")
+        break
+    else:
+        print("Invalid option.")
