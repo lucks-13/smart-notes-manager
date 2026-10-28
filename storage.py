@@ -9,4 +9,5 @@ def save_notes(notes):
 
 def load_notes():
     with open("session.json","r") as file:
-        json.load()
+        notes = json.load(file)
+    return notes
