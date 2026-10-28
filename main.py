@@ -55,7 +55,15 @@ while True:
                 Note.update_title(new_title)
                 print("Note updated successfully.")
             elif y == 2:
-                new_content = 
+                new_content = input("Enter new content :")
+                Note.update_content(new_title)
+                print("Note updated successfully.")
+            elif y == 3:
+
+            elif y == 4:
+
+            else:
+                print("Invalid option.")                             
 
     elif x==4:
         print("option 4")
