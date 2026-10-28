@@ -26,8 +26,14 @@ while True:
         save_notes(notes)
         print(f"Note \"{title}\" created successfully! ID : {note.id}")
     elif x==2:
-        print("====== Your Notes ======")
+        print("====== Your Notes ======\n")
         for note in notes:
+            print("ID : {note.id}")
+            print("Content : {note.content}")
+            print("Tags : {note.tags}")
+            print("Created : {note.created}")
+            print("Updated : {note.updated}")
+            print("------------------------")
     elif x==3:
         print("option 3")
     elif x==4:
