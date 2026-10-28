@@ -59,12 +59,16 @@ while True:
                         print("Note updated successfully.")
                     elif y == 2:
                         new_content = input("Enter new content :")
-                        note.update_content(new_title)
+                        note.update_content(new_content)
                         print("Note updated successfully.")
                     elif y == 3:
-                    
+                        new_tag = input("Enter tag to add :")
+                        note.add_tag(new_tag)
+                        print("Tag added successfully.")
                     elif y == 4:
-                    
+                        r_tag = input("Enter tag to remove :")
+                        note.remove_tag(r_tag)
+                        print("Tag removed successfully.")
                     else:
                         print("Invalid option.")
 
