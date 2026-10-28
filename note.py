@@ -1,3 +1,5 @@
+from datetime import datetime
+
 class Note:
     counter = 1
     def __init__(self,title,content):
@@ -6,6 +8,7 @@ class Note:
         self.title = title
         self.content = content
         self.tags = []
+        self.created = datetime.now()
     
 note1 = Note("title1","content1")
 note2 = Note("title2","content2")
