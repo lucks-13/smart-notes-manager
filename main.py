@@ -17,4 +17,6 @@ loaded_notes = load_notes()
 for note in loaded_notes:
     print(f"ID : {note.id}")
     print(f"title : {note.title}")
-    print(f"Con")
+    print(f"content : {note.content}")
+    print(f"Tags : {note.tags}")
+    print("--------------")
