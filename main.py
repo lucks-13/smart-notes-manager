@@ -41,10 +41,16 @@ while True:
     elif x==3:
         while True:
             try:
-                id = int(input("Enter ID of the note to update :\n"))
+                note_id = int(input("Enter ID of the note to update :\n"))
             except ValueError:
                 print("Please enter te valid ID.")
                 continue
+            for note in notes:
+                if note.id == note_id:
+
+            else:
+                
+
             print("1. Update title")
             print("2. Update content")
             print("3. Add tag")
