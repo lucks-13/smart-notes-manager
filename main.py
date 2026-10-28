@@ -71,9 +71,6 @@ while True:
                         print("Tag removed successfully.")
                     else:
                         print("Invalid option.")
-
-
-
             else:
                 print("Please enter te valid ID.")
                 continue
