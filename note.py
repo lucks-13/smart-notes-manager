@@ -11,33 +11,28 @@ class Note:
         self.tags = set()
         self.created = datetime.now()
         self.updated = self.created
-        self.dict_to_json()
 
     def update_title(self,new_title):
         self.title = new_title
         self.updated = datetime.now()
-        self.dict_to_json()
     
     def update_content(self,new_content):
         self.content = new_content
         self.updated = datetime.now()
-        self.dict_to_json()
 
     def add_tag(self,tag):
         self.tags.add(tag)
         self.updated = datetime.now()
-        self.dict_to_json()
 
     def remove_tag(self,tag):
         try:
             self.tags.remove(tag)
             self.updated = datetime.now()
-            self.dict_to_json()
         except KeyError:
             print(tag," Tag is not created yet so cannot be removed")
 
-    def dict_to_json(self):
-        dict = {
+    def to_dict(self):
+        note_dict = {
             "id" : self.id,
             "title" : self.title,
             "content" : self.content,
@@ -46,12 +41,8 @@ class Note:
             "updated" : self.updated.isoformat()
         }
 
-        with open("session.json","w") as file:
-            json.dump(note_dict,file,indent=4)
+        return note_dict
 
-
-    
-    
 note1 = Note("title1","content1")
 note2 = Note("title2","content2")
 
@@ -75,3 +66,10 @@ print(note1.title)
 print(note1.content)
 
 print(note1.tags)
+
+notes = [note1,note2]
+
+notes_data = []
+
+for i in notes:
+    
