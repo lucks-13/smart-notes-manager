@@ -45,7 +45,7 @@ while True:
         try:
             note_id = int(input("Enter ID of the note to update :"))
         except ValueError:
-            print("Please enter te valid numeric ID.")
+            print("Please enter a valid numeric ID.")
             continue
         selected_note = None
         for note in notes:
@@ -106,9 +106,11 @@ while True:
             print("Update cancelled.")
         else:
             print("Invalid option.")
-
     elif x==4:
-        print("option 4")
+        try:
+            note_id = int(input("Enter ID of the note to delete : "))
+        except ValueError:
+            print("Please enter a valid numeric ID.")
     elif x==5:
         print("option 5")
     elif x==6:
