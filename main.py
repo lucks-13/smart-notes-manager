@@ -82,12 +82,20 @@ while True:
         elif y == 3:
             new_tag = input("Enter tag to add :").strip()
             if not new_tag:
-                print("Tag cannot be ")
-                        note.add_tag(new_tag)
-                        save_notes(notes)
-                        print("Tag added successfully.")
-                    elif y == 4:
-                        r_tag = input("Enter tag to remove :")
+                print("Tag cannot be empty.")
+                continue
+            if new_tag in selected_note.tags:
+                print(f"Tag \"{new_tag}\" already exists.")
+            else:
+                selected_note.add_tag(new_tag)
+                save_notes(notes)
+                print("Tag added successfully.")
+        elif y == 4:
+            if not selected_note.tags:
+                print("This note no tags.")
+                continue
+            print()
+            r_tag = input("Enter tag to remove :")
                         note.remove_tag(r_tag)
                         save_notes(notes)
                         print("Tag removed successfully.")
