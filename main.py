@@ -165,7 +165,9 @@ while True:
             print(f"\nFound {len(results)} matching notes : \n")
             for note in results:
                 print(f"ID : {note.id}")
-                print(f"Title : {note}")
+                print(f"Title : {note.title}")
+                print(f"Content : {note.content}")
+                print(f"Tags : {', '.join()}")
     elif x==6:
         print("Good Bye.")
         break
