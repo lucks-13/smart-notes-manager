@@ -29,6 +29,15 @@ class TestNoteUtils(unittest.TestCase):
         self.assertIs(results[0], self.note2)
 
     def test_search_is_case_insensitive(self):
-        results = search_notes(self.notes)
+        results = search_notes(self.notes, 1, "TITLE 1")
+        self.assertEqual(len(results), 1)
+        self.assertIs(results[0], self.note1)
+
+    def test_search_with_no_matches(self):
+        results = search_notes(self.notes, 1, "Title 3")
+        self.assertEqual(results, [])
+
+if __name__ == "__main__":
+    unittest.main()
 
     
