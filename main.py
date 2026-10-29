@@ -94,16 +94,18 @@ while True:
             if not selected_note.tags:
                 print("This note no tags.")
                 continue
-            print("Existing tags : ",", ".join())
-            r_tag = input("Enter tag to remove :")
-            note.remove_tag(r_tag)
-                        save_notes(notes)
-                        print("Tag removed successfully.")
-                    else:
-                        print("Invalid option.")
+            print("Existing tags : ",", ".join(sorted(selected_note.tags)))
+            r_tag = input("Enter tag to remove : ").strip()
+            if r_tag in selected_note.tags:
+                selected_note.remove_tag(r_tag)
+                save_notes(notes)
+                print("Tag removed successfully.")
             else:
-                print("Please enter te valid ID.")
-                continue
+                print(f"Tag \"{r_tag}\" does not exist.")
+        elif y == 5:
+            print("Update cancelled.")
+        else:
+            print("Please enter te valid ID.")
 
     elif x==4:
         print("option 4")
