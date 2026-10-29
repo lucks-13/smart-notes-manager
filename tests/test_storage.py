@@ -37,3 +37,11 @@ class TestStorage(unittest,TestCase):
         self.assertEqual(loaded_notes[0].id, note.id)
         self.assertEqual(loaded_notes[0].created, note.created)
         self.assertEqual(loaded_notes[0].updated, note.updated)
+
+    def test_load_missing_file(self):
+        missing_filename = os.path.join(self.temp_dir.name, "missing.json")
+        loaded_notes = load_notes(missing_filename)
+        self.assertEqual(loaded_notes, [])
+        
+if __name__ == "__main__":
+    unittest.main()
