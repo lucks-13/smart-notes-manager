@@ -32,7 +32,7 @@ while True:
             print("No notes found.")
         else:
             for note in notes:
-                
+                display_note(note)
     elif x==3:
         if not notes:
             print("No notes available to update.")
@@ -151,11 +151,7 @@ while True:
         if results:
             print(f"\nFound {len(results)} matching notes : \n")
             for note in results:
-                print(f"ID : {note.id}")
-                print(f"Title : {note.title}")
-                print(f"Content : {note.content}")
-                print(f"Tags : {', '.join(sorted(note.tags)) if note.tags else 'None'}")
-                print("-----------------------------------")
+                display_note(note)
         else:
             print("No matching notes found.")
     elif x==6:

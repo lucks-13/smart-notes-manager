@@ -10,5 +10,5 @@ def display_note(note):
     print(f"Content : {note.content}")
     print(f"Tags : {', '.join(sorted(note.tags)) if note.tags else 'None'}")
     print(f"Created : {note.created}")
-                    print(f"Updated : {note.updated}")
-                    print("------------------------------------")
+    print(f"Updated : {note.updated}")
+    print("------------------------------------")
