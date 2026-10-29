@@ -112,16 +112,21 @@ while True:
         except ValueError:
             print("Please enter a valid numeric ID.")
             continue
+        selected_note = None
         for note in notes:
             if note.id == note_id:
                 selected_note = note
                 break
+        if not notes:
+            print("No note available to delete.")
+            continue
         if selected_note is None:
             print(f"No note found with ID {note_id}.")
             continue
         confirmation = input(f"Are you sure you want to delete \"{selected_note.title}\" ? (y/n) : ")
         if confirmation == "y" :
-            selected_note.delete_note()
+            notes.remove(selected_note)
+            save_notes(notes)
             print("Note deleted successfully.")
         else:
             print("Operation cancelled.")
