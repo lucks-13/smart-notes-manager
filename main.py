@@ -124,11 +124,11 @@ while True:
             print(f"No note found with ID {note_id}.")
             continue
         confirmation = input(f"Are you sure you want to delete \"{selected_note.title}\" ? (y/n) : ").strip().lower()
-        if confirmation == "y" or "yes" :
+        if confirmation in ("y","yes"):
             notes.remove(selected_note)
             save_notes(notes)
             print("Note deleted successfully.")
-        elif confirmation == "n" or "no" :
+        elif confirmation in ("n","no"):
             print("Operation cancelled.")
         else:
             print("Invalid confirmation. Operation cancelled.")
