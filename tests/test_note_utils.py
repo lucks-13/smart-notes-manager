@@ -23,6 +23,12 @@ class TestNoteUtils(unittest.TestCase):
         self.assertEqual(len(results),1)
         self.assertIs(results[0], self.note2)
 
-    def test
+    def test_search_by_tag(self):
+        results = search_notes(self.notes, 3, "Tag 2")
+        self.assertEqual(len(results),1)
+        self.assertIs(results[0], self.note2)
+
+    def test_search_is_case_insensitive(self):
+        results = search_notes(self.notes)
 
     
