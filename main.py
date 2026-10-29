@@ -1,4 +1,4 @@
-from note import Note
+from note import Note, find_note_by_id
 from storage import save_notes, load_notes
 
 notes = load_notes()
@@ -176,3 +176,10 @@ while True:
         break
     else:
         print("Invalid option.")
+
+
+test_note = find_note_by_id(notes,1)
+if test_note is not None:
+    print(test_note.title)
+else:
+    print("Not Found")
