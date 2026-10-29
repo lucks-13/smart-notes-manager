@@ -69,17 +69,20 @@ while True:
         if y == 1:
             new_title = input("Enter new title :").strip()
             if not new_title:
-                        
-                        note.update_title(new_title)
-                        save_notes(notes)
-                        print("Note updated successfully.")
-                    elif y == 2:
-                        new_content = input("Enter new content :")
-                        note.update_content(new_content)
-                        save_notes(notes)
-                        print("Note updated successfully.")
-                    elif y == 3:
-                        new_tag = input("Enter tag to add :")
+                print("Title cannot be empty.")
+                continue
+            selected_note.update_title(new_title)
+            save_notes(notes)
+            print("Note title updated successfully.")
+        elif y == 2:
+            new_content = input("Enter new content :").strip()
+            selected_note.update_content(new_content)
+            save_notes(notes)
+            print("Note content updated successfully.")
+        elif y == 3:
+            new_tag = input("Enter tag to add :").strip()
+            if not new_tag:
+                print("Tag cannot be ")
                         note.add_tag(new_tag)
                         save_notes(notes)
                         print("Tag added successfully.")
