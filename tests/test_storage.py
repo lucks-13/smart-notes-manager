@@ -45,7 +45,7 @@ class TestStorage(unittest.TestCase):
 
     def test_load_invalid_json(self):
         with open(self.filename, "w") as file:
-            file.write("{ invalid json")
+            file.write("{ invalid json file")
         loaded_notes = load_notes(self.filename)
         self.assertEqual(loaded_notes, [])
 
