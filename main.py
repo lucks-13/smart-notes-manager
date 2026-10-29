@@ -107,6 +107,9 @@ while True:
         else:
             print("Invalid option.")
     elif x==4:
+        if not notes:
+            print("No note available to delete.")
+            continue
         try:
             note_id = int(input("Enter ID of the note to delete : "))
         except ValueError:
@@ -117,20 +120,19 @@ while True:
             if note.id == note_id:
                 selected_note = note
                 break
-        if not notes:
-            print("No note available to delete.")
-            continue
         if selected_note is None:
             print(f"No note found with ID {note_id}.")
             continue
-        confirmation = input(f"Are you sure you want to delete \"{selected_note.title}\" ? (y/n) : ")
-        if confirmation == "y" :
+        confirmation = input(f"Are you sure you want to delete \"{selected_note.title}\" ? (y/n) : ").strip().lower()
+        if confirmation == "y" or "yes" :
             notes.remove(selected_note)
             save_notes(notes)
             print("Note deleted successfully.")
-        else:
+        elif confirmation == "n" or "no" :
             print("Operation cancelled.")
-            continue
+        else:
+            print("Invalid confirmation. Operation cancelled.")
+
     elif x==5:
         print("option 5")
     elif x==6:
