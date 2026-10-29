@@ -53,18 +53,23 @@ while True:
                     selected_note = note
                     break
         if selected_note is None:
-            print(f"No note found with ID ")
-                    print("1. Update title")
-                    print("2. Update content")
-                    print("3. Add tag")
-                    print("4. Remove tag\n")
-                    try:
-                        y = int(input("Choose what to update :"))
-                    except ValueError:
-                        print("Please enter te valid option.")
-                        continue
-                    if y == 1:
-                        new_title = input("Enter new title :")
+            print(f"No note found with ID {note_id}.")
+            continue
+        print(f"\nSelected note : {selected_note.title}")
+        print("\n1. Update title")
+        print("2. Update content")
+        print("3. Add tag")
+        print("4. Remove tag")
+        print("5. Cancel")
+        try:
+            y = int(input("Choose what to update :"))
+        except ValueError:
+            print("Please enter te valid option.")
+            continue
+        if y == 1:
+            new_title = input("Enter new title :").strip()
+            if not new_title:
+                        
                         note.update_title(new_title)
                         save_notes(notes)
                         print("Note updated successfully.")
