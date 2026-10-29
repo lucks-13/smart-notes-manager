@@ -8,5 +8,8 @@ A command line application for creating, organizing, editing and deleting person
 
 TLDR;
 
+A command line application similar to obsidian but a command line version, its a version 1 and i will improve it with better during upcoming days. need to learn other things inorder to improve so im pausing this project as version 1
 
-A command line application { similar to obsidian }
+# Ai Disclosure
+
+I used ai as my learning assistant to understand concept
