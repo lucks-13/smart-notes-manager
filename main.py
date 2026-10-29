@@ -49,9 +49,9 @@ while True:
             continue
         selected_note = None
         for note in notes:
-                if note.id == note_id:
-                    selected_note = note
-                    break
+            if note.id == note_id:
+                selected_note = note
+                break
         if selected_note is None:
             print(f"No note found with ID {note_id}.")
             continue
@@ -111,6 +111,15 @@ while True:
             note_id = int(input("Enter ID of the note to delete : "))
         except ValueError:
             print("Please enter a valid numeric ID.")
+            continue
+        for note in notes:
+            if note.id == note_id:
+                selected_note = note
+                break
+        if selected_note is None:
+            print(f"No note found with ID {note_id}.")
+            continue
+        print()
     elif x==5:
         print("option 5")
     elif x==6:
