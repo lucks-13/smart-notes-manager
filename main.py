@@ -1,5 +1,5 @@
 from note import Note
-from note_utils import find_note_by_id
+from note_utils import find_note_by_id, display_note
 from storage import save_notes, load_notes
 
 notes = load_notes()
@@ -32,13 +32,7 @@ while True:
             print("No notes found.")
         else:
             for note in notes:
-                print(f"ID : {note.id}")
-                print(f"Title : {note.title}")
-                print(f"Content : {note.content}")
-                print(f"Tags : {', '.join(sorted(note.tags)) if note.tags else 'None'}")
-                print(f"Created : {note.created}")
-                print(f"Updated : {note.updated}")
-                print("------------------------------------")
+                
     elif x==3:
         if not notes:
             print("No notes available to update.")
