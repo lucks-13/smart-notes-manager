@@ -6,14 +6,30 @@ Hello everyone this is my second project in phantom and also day 3 of my journey
 # What my project does.
 A command line application for creating, organizing, editing and deleting personal notes. Your notes will be saved even when you close and reopen the application.
 
-TLDR;
+# Why I made this project.
 
-A command line application similar to obsidian but a command line version, its a version 1 and i will improve it with better during upcoming days. need to learn other things inorder to improve so im pausing this project as version 1
+# How to run this project.
+```
+git clone https://github.com/lucks-13/smart-notes-manager.git
+```
+```
+.\dist\smart-notes-manager.exe
+```
+or
+```
+python main.py
+```
 
 # What i have learned.
-* object oriented programmin
+* object oriented programming
 * Json serialization and deserialization
 * Modular programming and seperating functions into different files
+* searching and modifying collections of objects
+* introduction to testing, automated unit tests using unittest library
+
+# TLDR;
+
+A command line application similar to obsidian but a command line version, its a version 1 and i will improve it with better during upcoming days. need to learn other things inorder to improve so im pausing this project as version 1
 
 # Ai Disclosure
 
