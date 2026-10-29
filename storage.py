@@ -15,5 +15,7 @@ def load_notes(filename="session.json"):
         notes = [Note.from_dict(data) for data in notes_data]
         return notes
     except FileNotFoundError:
-        print("session.json file not found.")
+        print(f"{filename} file not found.")
         return []
+    except json.JSONDecodeError:
+        print(f"")

@@ -6,7 +6,7 @@ import unittest
 from note import Note
 from storage import save_notes, load_notes
 
-class TestStorage(unittest,TestCase):
+class TestStorage(unittest.TestCase):
     def setUp(self):
         self.temp_dir = tempfile.TemporaryDirectory()
         self.filename = os.path.join(self.temp_dir.name, "test_session.json")
@@ -42,6 +42,6 @@ class TestStorage(unittest,TestCase):
         missing_filename = os.path.join(self.temp_dir.name, "missing.json")
         loaded_notes = load_notes(missing_filename)
         self.assertEqual(loaded_notes, [])
-        
+
 if __name__ == "__main__":
     unittest.main()
