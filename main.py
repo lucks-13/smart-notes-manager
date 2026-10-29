@@ -51,8 +51,11 @@ while True:
                     print("2. Update content")
                     print("3. Add tag")
                     print("4. Remove tag\n")
-
-                    y = int(input("Choose what to update :"))
+                    try:
+                        y = int(input("Choose what to update :"))
+                    except ValueError:
+                        print("Please enter te valid option.")
+                        continue
                     if y == 1:
                         new_title = input("Enter new title :")
                         note.update_title(new_title)
@@ -61,15 +64,17 @@ while True:
                     elif y == 2:
                         new_content = input("Enter new content :")
                         note.update_content(new_content)
-                        
+                        save_notes(notes)
                         print("Note updated successfully.")
                     elif y == 3:
                         new_tag = input("Enter tag to add :")
                         note.add_tag(new_tag)
+                        save_notes(notes)
                         print("Tag added successfully.")
                     elif y == 4:
                         r_tag = input("Enter tag to remove :")
                         note.remove_tag(r_tag)
+                        save_notes(notes)
                         print("Tag removed successfully.")
                     else:
                         print("Invalid option.")
