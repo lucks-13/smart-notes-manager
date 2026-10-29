@@ -24,8 +24,18 @@ class TestNote(unittest.TestCase):
         note.add_tag("Tag 1")
         self.assertIn("Tag 1", note.tags)
 
-    def test_add duplicate
+    def test_add_duplicate_tag(self):
+        note = Note("Title 1","Content 1")
+        note.add_tag("Tag 1")
+        self.assertEqual(len(note.tags),1)
 
+    def test_remove_tag(self):
+        note = Note("Title 1","Content 1")
+        note.add_tag("Tag 1")
+        note.remove_tag("Tag 1")
+        self.assertNotIn("Tag 1",note.tags)
+
+    def test_remove_non_
 
 
 if __name__ == "__main__":
