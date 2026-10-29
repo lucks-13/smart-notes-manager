@@ -56,10 +56,12 @@ while True:
                     if y == 1:
                         new_title = input("Enter new title :")
                         note.update_title(new_title)
+                        save_notes(notes)
                         print("Note updated successfully.")
                     elif y == 2:
                         new_content = input("Enter new content :")
                         note.update_content(new_content)
+                        
                         print("Note updated successfully.")
                     elif y == 3:
                         new_tag = input("Enter tag to add :")
