@@ -4,18 +4,21 @@
         "title": "new_title1",
         "content": "content1",
         "tags": [
-            "2tag1",
-            "1tag1"
+            "1tag1",
+            "2tag1"
         ],
         "created": "2026-10-28T19:56:01.057511",
         "updated": "2026-10-28T19:56:01.057536"
     },
     {
         "id": 2,
-        "title": "title2",
-        "content": "content2",
-        "tags": [],
+        "title": "new_title2",
+        "content": "new_content 2",
+        "tags": [
+            "2tag2",
+            "1tag2"
+        ],
         "created": "2026-10-28T19:56:01.057531",
-        "updated": "2026-10-28T19:56:01.057531"
+        "updated": "2026-10-29T11:41:19.342117"
     }
 ]

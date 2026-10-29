@@ -34,7 +34,7 @@ while True:
                 print(f"ID : {note.id}")
                 print(f"Title : {note.title}")
                 print(f"Content : {note.content}")
-                print(f"Tags : {', '.join(note.tags) if note.tags else 'None'}")
+                print(f"Tags : {', '.join(sorted(note.tags)) if note.tags else 'None'}")
                 print(f"Created : {note.created}")
                 print(f"Updated : {note.updated}")
                 print("------------------------------------")
@@ -105,7 +105,7 @@ while True:
         elif y == 5:
             print("Update cancelled.")
         else:
-            print("Please enter te valid ID.")
+            print("Invalid option.")
 
     elif x==4:
         print("option 4")
