@@ -1,5 +1,9 @@
 import json
+from pathlib import Path
 from note import Note
+
+app_data_dir = Path.home() / "smart-notes-manager"
+default_storage
 
 def save_notes(notes, filename="session.json"):
     notes_data = [note.to_dict() for note in notes]

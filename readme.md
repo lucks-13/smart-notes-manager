@@ -5,4 +5,5 @@ A command line application for creating, organizing, editing and deleting person
 
 TLDR;
 
+
 A command line application { similar to obsidian }
