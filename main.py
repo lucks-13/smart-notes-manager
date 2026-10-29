@@ -134,7 +134,10 @@ while True:
             print("Invalid confirmation. Operation cancelled.")
 
     elif x==5:
-        print("option 5")
+        if not notes:
+            print("No notes available to search.")
+            continue
+        print(\n====== Search Notes ======")
     elif x==6:
         print("Good Bye.")
         break
