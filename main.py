@@ -162,7 +162,10 @@ while True:
             elif search_option == 3 and any(word in tag.lower() for tag in note.tags) :
                 results.append(note)
         if results:
-            print(f"\nFound {len(results)} matching note")
+            print(f"\nFound {len(results)} matching notes : \n")
+            for note in results:
+                print(f"ID : {note.id}")
+                print(f"Title : {note}")
     elif x==6:
         print("Good Bye.")
         break
