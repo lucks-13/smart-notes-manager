@@ -23,4 +23,12 @@ class TestStorage(unittest,TestCase):
             data = json.load(file)
         self.assertEqual(len(data), 1)
         self.assertEqual(data[0]["title"], "Title 1")
-        self.assertIn()
+        self.assertIn("Tag 1", data[0]["tags"])
+
+    def test_load_notes(self):
+        note = Note("Title 1", "Content 1")
+        note.add_tag("Tag 1")
+        save_notes([note], self.filename)
+        loaded_notes = load_notes(self.filename)
+        self.assertEqual(len(loaded_notes), 1)
+        self.assertEqual(loaded_notes[0])
