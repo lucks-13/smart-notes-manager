@@ -147,8 +147,20 @@ while True:
             print("Please enter a valid option.")
             continue
         if search_option not in (1,2,3):
-            print("Invalid op")
+            print("Invalid option.")
             continue
+        word = input("Enter search word : ").strip().lower()
+        if not word:
+            print("Search word cannot be empty.")
+            continue
+        results = []
+        for note in notes:
+            if search_option == 1 and word in note.title.lower():
+                results.append(note)
+            elif search_option and word in :
+                results.append(note)
+            elif search_option and word in :
+                results.append(note)
     elif x==6:
         print("Good Bye.")
         break
