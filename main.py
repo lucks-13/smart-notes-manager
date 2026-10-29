@@ -137,7 +137,18 @@ while True:
         if not notes:
             print("No notes available to search.")
             continue
-        print(\n====== Search Notes ======")
+        print("\n====== Search Notes ======")
+        print("1. Search by title")
+        print("2. Search by content")
+        print("3. Search by tag")
+        try:
+            search_option = int(input("Choose a search type : "))
+        except ValueError:
+            print("Please enter a valid option.")
+            continue
+        if search_option not in (1,2,3):
+            print("Invalid op")
+            continue
     elif x==6:
         print("Good Bye.")
         break
