@@ -1,6 +1,8 @@
 # Smart Notes Manager
 Hello everyone this is my second project in phantom and also day 3 of my journey. Nothing to say, im just here to show my consistency and grind some fragments.
 
+Kindly support me along my journey.
+
 # What my project does.
 A command line application for creating, organizing, editing and deleting personal notes. Your notes will be saved even when you close and reopen the application.
 
@@ -18,7 +20,7 @@ or
 python main.py
 ```
 # How I made this project.
-still learning python, other language are not yet started so i applied 
+still learning python, other language are not yet started so I applied object oriented programming concept to manage notes and json for presistent data storage, I implemented CRUD operations, tagging and search function, worte some automated tests using unittest library finally created this standalone project. 
 
 # What I have learned.
 * object oriented programming
