@@ -17,13 +17,13 @@ def save_notes(notes, filename=None):
 def load_notes(filename=None):
     storage_path = Path(filename) if filename else default_storage_file
     try:
-        with open(filename,"r") as file:
+        with storage_path.open("r", encoding="utf-8") as file:
             notes_data = json.load(file)
         notes = [Note.from_dict(data) for data in notes_data]
         return notes
     except FileNotFoundError:
-        print(f"{filename} file not found.")
+        print(f"{storage_path} file not found.")
         return []
     except json.JSONDecodeError:
-        print(f"{filename} contains invalid Json.")
+        print(f"{storage_path} contains invalid Json.")
         return []
