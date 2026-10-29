@@ -1,6 +1,6 @@
 import unittest
 from note import Note
-from note_utils import find_note_by_id
+from note_utils import find_note_by_id, search_notes
 
 class TestNoteUtils(unittest.TestCase):
     def setUp(self):
@@ -17,5 +17,12 @@ class TestNoteUtils(unittest.TestCase):
     def test_find_note_by_non_existent_id(self):
         result = find_note_by_id(self.notes, -1)
         self.assertIsNone(result)
+
+    def test_search_by_content(self):
+        results = search_notes(self.notes, 2, "Content")
+        self.assertEqual(len(results),1)
+        self.assertIs(results[0], self.note2)
+
+    def test
 
     
