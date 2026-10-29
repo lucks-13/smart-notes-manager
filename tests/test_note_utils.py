@@ -13,7 +13,7 @@ class TestNoteUtils(unittest.TestCase):
     def test_search_by_title(self):
         results = search_notes(self.notes, 1, "Title 1")
         self.assertEqual(len(results), 1)
-        self.assertIs()
+        self.assertIs(results[0], self.note1)
 
     def test_find_note_by_existing_id(self):
         result = find_note_by_id(self.notes, self.note1.id)
