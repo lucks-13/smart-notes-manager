@@ -94,9 +94,9 @@ while True:
             if not selected_note.tags:
                 print("This note no tags.")
                 continue
-            print()
+            print("Existing tags : ",", ".join())
             r_tag = input("Enter tag to remove :")
-                        note.remove_tag(r_tag)
+            note.remove_tag(r_tag)
                         save_notes(notes)
                         print("Tag removed successfully.")
                     else:
