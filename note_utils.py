@@ -19,7 +19,8 @@ def search_notes(notes, search_option, word):
     for note in notes:
         if search_option == 1 and word in note.title.lower():
             results.append(note)
-                elif search_option == 2 and word in note.content.lower():
-                    results.append(note)
-                elif search_option == 3 and any(word in tag.lower() for tag in note.tags) :
-                    results.append(note)
+        elif search_option == 2 and word in note.content.lower():
+            results.append(note)
+        elif search_option == 3 and any(word in tag.lower() for tag in note.tags) :
+            results.append(note)
+    return results
