@@ -167,7 +167,10 @@ while True:
                 print(f"ID : {note.id}")
                 print(f"Title : {note.title}")
                 print(f"Content : {note.content}")
-                print(f"Tags : {', '.join()}")
+                print(f"Tags : {', '.join(sorted(note.tags)) if note.tags else 'None'}")
+                print("-----------------------------------")
+        else:
+            print("No matching notes found.")
     elif x==6:
         print("Good Bye.")
         break
