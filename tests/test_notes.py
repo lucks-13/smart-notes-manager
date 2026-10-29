@@ -8,7 +8,16 @@ class TestNote(unittest.TestCase):
         self.assertEqual(note.content,"Content 1")
 
     def test_update_title(self):
-        note = Note()
+        note = Note("Title 1","Content 1")
+        og_update = note.updated
+        note.update_title("New_Title 1")
+        self.assertEqual(note.title,"New_Title 1")
+        self.assertGreaterEqual
+    
+    def test_update_content(self):
+        note = Note("Title 1","Content 1")
+        note.update_content("New_Content 1")
+        self.assertEqual(note.content,"New_Content 1")
 
 if __name__ == "__main__":
     unittest.main()
