@@ -32,6 +32,7 @@ class Note:
             self.updated = datetime.now()
         else:
             print(f"Tag \"{tag}\" does not exist.")
+    
 
     def to_dict(self):
         return {

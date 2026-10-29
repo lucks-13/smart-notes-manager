@@ -119,7 +119,13 @@ while True:
         if selected_note is None:
             print(f"No note found with ID {note_id}.")
             continue
-        print()
+        confirmation = input(f"Are you sure you want to delete \"{selected_note.title}\" ? (y/n) : ")
+        if confirmation == "y" :
+            selected_note.delete_note()
+            print("Note deleted successfully.")
+        else:
+            print("Operation cancelled.")
+            continue
     elif x==5:
         print("option 5")
     elif x==6:
