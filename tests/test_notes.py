@@ -35,8 +35,12 @@ class TestNote(unittest.TestCase):
         note.remove_tag("Tag 1")
         self.assertNotIn("Tag 1",note.tags)
 
-    def test_remove_non_
-
+    def test_remove_non_existent_tag(self):
+        note = Note("Title 1","Content 1")
+        note.add_tag("Tag 1")
+        og_tag = note.tags.copy()
+        note.remove_tag("Tag 2")
+        self.assertEqual(note.tags, og_tag)
 
 if __name__ == "__main__":
     unittest.main()
