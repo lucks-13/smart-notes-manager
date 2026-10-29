@@ -18,4 +18,5 @@ def load_notes(filename="session.json"):
         print(f"{filename} file not found.")
         return []
     except json.JSONDecodeError:
-        print(f"")
+        print(f"{filename} contains invalid Json.")
+        return []
