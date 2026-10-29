@@ -1,13 +1,11 @@
 # Smart Notes Manager
-
-Hello everyone this is my second project in phantom and also day 3 of my journey.
-
+Hello everyone this is my second project in phantom and also day 3 of my journey. Nothing to say, im just here to show my consistency and grind some fragments.
 
 # What my project does.
 A command line application for creating, organizing, editing and deleting personal notes. Your notes will be saved even when you close and reopen the application.
 
 # Why I made this project.
-
+As this is my second project i thought a cli version of something which i use regularly, this cli application helps me to save api keys locally unless i get attack from a hacker.
 # How to run this project.
 ```
 git clone https://github.com/lucks-13/smart-notes-manager.git
@@ -19,8 +17,10 @@ or
 ```
 python main.py
 ```
+# How I made this project.
+still learning python, other language are not yet started so i applied 
 
-# What i have learned.
+# What I have learned.
 * object oriented programming
 * Json serialization and deserialization
 * Modular programming and seperating functions into different files
