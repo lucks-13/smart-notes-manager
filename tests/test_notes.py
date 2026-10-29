@@ -27,6 +27,7 @@ class TestNote(unittest.TestCase):
     def test_add_duplicate_tag(self):
         note = Note("Title 1","Content 1")
         note.add_tag("Tag 1")
+        note.add_tag("Tag 1")
         self.assertEqual(len(note.tags),1)
 
     def test_remove_tag(self):
