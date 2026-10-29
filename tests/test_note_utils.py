@@ -24,7 +24,7 @@ class TestNoteUtils(unittest.TestCase):
         self.assertIsNone(result)
 
     def test_search_by_content(self):
-        results = search_notes(self.notes, 2, "Content")
+        results = search_notes(self.notes, 2, "Content 2")
         self.assertEqual(len(results),1)
         self.assertIs(results[0], self.note2)
 
