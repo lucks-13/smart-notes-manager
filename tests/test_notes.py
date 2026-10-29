@@ -12,12 +12,21 @@ class TestNote(unittest.TestCase):
         og_update = note.updated
         note.update_title("New_Title 1")
         self.assertEqual(note.title,"New_Title 1")
-        self.assertGreaterEqual
+        self.assertGreaterEqual(note.updated, og_update)
     
     def test_update_content(self):
         note = Note("Title 1","Content 1")
         note.update_content("New_Content 1")
         self.assertEqual(note.content,"New_Content 1")
+
+    def test_add_tag(self):
+        note = Note("Title 1","Content 1")
+        note.add_tag("Tag 1")
+        self.assertIn("Tag 1", note.tags)
+
+    def test_add duplicate
+
+
 
 if __name__ == "__main__":
     unittest.main()
