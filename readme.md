@@ -10,6 +10,11 @@ TLDR;
 
 A command line application similar to obsidian but a command line version, its a version 1 and i will improve it with better during upcoming days. need to learn other things inorder to improve so im pausing this project as version 1
 
+# What i have learned.
+* object oriented programmin
+* Json serialization and deserialization
+* Modular programming and seperating functions into different files
+
 # Ai Disclosure
 
-I used ai as my learning assistant to understand concept
+I used chatgpt as my learning assistant to understand concept, improve my code and logical thinking and to troubleshoot errors, ai guided me to build this project and explicitly told to help me only when i got stuck. 95 to 99 % of the code is Human coding. the ai just gave me instruction when i got struck.
