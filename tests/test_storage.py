@@ -16,4 +16,11 @@ class TestStorage(unittest,TestCase):
 
     def test_save_notes(self):
         note = Note("Title 1", "Content 1")
-        note.add_tag()
+        note.add_tag("Tag 1")
+        save_notes([note], self.filename)
+        self.assertTrue(os.path.exists(self.filename))
+        with open(self.filename, "r") as file:
+            data = json.load(file)
+        self.assertEqual(len(data), 1)
+        self.assertEqual(data[0]["title"], "Title 1")
+        self.assertIn()
